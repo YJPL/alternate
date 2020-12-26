@@ -10,7 +10,7 @@ repository:
 date_format : "%-d %b %Y"
 # social
 social:
-  name: Yves Capelle
+  name: alternatyves
   links:
     - https://twitter.com/alternatyves
     - https://github.com/alternatyves
@@ -21,7 +21,7 @@ social:
     username: alternate
     url: https://github.com/YJPL
 
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://yjpl.github.io/alternate/" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: 
 
 # No analytics, because it's a waste of time
