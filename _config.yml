@@ -4,6 +4,8 @@ title: "alternate"
 author: "alternate"
 # The site meta description, should be under 150 characters for best SEO purposes.
 description: "A Jekyll portfolio theme built with Tachyons"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://yjpl.github.io/alternate" # the base hostname & protocol for your site, e.g. http://example.com
 repository:
 
 # Date format
@@ -20,9 +22,6 @@ social:
   github:
     username: alternate
     url: https://github.com/YJPL
-
-url: "https://yjpl.github.io/alternate/" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
 
 # Analytics, if you are into this kind of things
 
