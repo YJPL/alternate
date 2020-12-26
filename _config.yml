@@ -21,10 +21,10 @@ social:
     username: alternate
     url: https://github.com/YJPL
 
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: ""
+url: "https://yjpl.github.io/alternate/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
 
-# No analytics, because it's a waste of time
+# Analytics, if you are into this kind of things
 
 # Reading Files
 include:
