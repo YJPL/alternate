@@ -78,8 +78,6 @@ Collections include portfolio works and other -> see `_config.yml` frontmatter f
 
 Build with [Jekyll](https://jekyllrb.com) loosely based on [JKL + TACHYONS](https://github.com:mrmrs/jkl-tachyons), (c) 2015 @mrmrs
 
-World Population Counter - By [JavaScript Kit](http://www.javascriptkit.com) based on code by Adam Brown
-
 Thanks to [GitHub](https://github.com/) for code versioning and to [Netlify](https://www.netlify.com) for deployment and content delivery.
 
 # Copyright / License
@@ -90,7 +88,7 @@ The content of this project itself, all illustrations & design works are (c) Yve
 
 The MIT License (MIT)
 
-Copyright (c) 2019-2020 @YJPL
+Copyright (c) 2020 @YJPL
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
