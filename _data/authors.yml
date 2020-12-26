@@ -1,0 +1,26 @@
+# Authors
+
+author:
+  name          : "Author"
+  picture       : "/img/author.png"
+  url           : "https://example.com"
+  email         :
+  bio           : "Author bio here"
+  post_meta_bio : "More about the author"
+  cta           : "Subscribe"
+  cta_url       : "/alternate-theme-setup/"
+  twitter       : ""
+  facebook      : ""
+
+guest:
+  name          : "Guest"
+  picture       : "/img/author-2.png"
+  url           : "https://example.com"
+  email         :
+  bio           : "This is the guest bio"
+  post_meta_bio : "This is meta"
+  cta           : "Subscribe"
+  cta_url       : "/how-to-use-jekyll/"
+  twitter       : ""
+  facebook      : ""
+  

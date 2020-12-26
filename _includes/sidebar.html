@@ -1,0 +1,25 @@
+<aside class="pa3 ph4-m w-100 w-25-l">
+
+  {% if page.layout == "article" %}
+    <section class="section  section--related-posts">
+      {% for post in site.related_posts limit:4 %}
+              {% include archive.html type="list" %}
+            {% endfor %}
+    </section>
+
+  {% elsif page.layout == "page" or page.layout == "home" or page.layout == "post" %}
+    <section class="section  section--description">
+      <h3>About this site</h3>
+      <p>{{ site.description }}</p>
+
+    </section>
+
+  {% elsif page.layout == "archive-taxonomy" %}
+    <section class="section  section--category-index">
+      <h3>Index</h3>
+      {% include category_tag_list.html %}
+    </section>
+
+  {% endif %}
+
+</aside>

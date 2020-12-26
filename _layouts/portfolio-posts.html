@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+{% assign collection = site.collections | where: "slug",collection %}
+{% assign collection = collection[0] %}
+{% if collection %}
+    {% capture collection_content %}<a class="label" href="{{ category.url }}">{{ collection.name }}</a>{% endcapture %}
+{% endif %}
+
+<p id="post-meta">{{ category_content }}</p>
+
+  <section class="pa3 pa5-ns">
+  <article class="f5 f3-ns lh-copy measure-wide avenir">
+
+    {% if site.data.theme.collection-archive %}
+    {% include collection-archive.html %}
+    {%endif%}
+
+    <!--   <span class="ph2"></span>{%if page.categories%} {%for category in page.categories%}<a class="mw7 w-100 lh-copy" href="/portfolio/{{category}}">{{category | prepend: "#"}}</a>{%endfor%}{%endif%} -->
+
+    <!-- This is where post content lives -->
+      {{content}}
+      
+      {%if highlight %}
+      <pre class="f5-ns code">
+      {%endif%}
+    <!-- end of post content -->
+
+    {% for collection in collections %}
+      <a class="f6 br1 mt2 mr1 pa2 link black-60 hover-light-blue bg-near-white hover-bg-black-80" href="{{ "/collection/" | absolute_url }}{{ collection | slugify }}/">{{ collection }}</a>
+    {% endfor %}
+
+
+
+  </article>
+<!--  {% include _related_posts.html %} -->
+
+{% include post_pagination.html %}
+
+</section>

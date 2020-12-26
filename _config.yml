@@ -1,0 +1,143 @@
+# This will be the first part of the title tag for your site <title> site.name + page.title </title>
+title: "alternate"
+# Owner (organization or individual) of site content
+author: "alternate"
+# The site meta description, should be under 150 characters for best SEO purposes.
+description: "A Jekyll portfolio theme built with Tachyons"
+repository:
+
+# Date format
+date_format : "%-d %b %Y"
+# social
+social:
+  name: Yves Capelle
+  links:
+    - https://twitter.com/alternatyves
+    - https://github.com/alternatyves
+  twitter:
+    username: alternatyves
+    url: https://twitter.com/
+  github:
+    username: alternate
+    url: https://github.com/YJPL
+
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+#baseurl: ""
+
+# No analytics, because it's a waste of time
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+
+# Outputting
+permalink: /:title/
+paginate_path: "/page:num/"
+timezone: Europe/Paris
+
+pagination:
+  enabled: True
+  collection: posts
+  per_page: 5
+
+# directories
+imageurl: /img/
+#videourl: /videos/
+
+# Global classes
+gallery_classes: gallery
+link_classes: link no-underline hover-light-green active-black
+code_classes: bg-washed-green pa1
+post_heading_classes: f3 lh-title
+paragraph_classes: f6 f5-ns
+
+# Plugins
+plugins:
+  - jekyll-picture-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-archives
+  - jekyll-seo-tag
+
+# Jekyll Picture Tag general settings
+picture:
+  source: "img/"
+  output: "img/" # images/resized/%{width}/%{basename}
+  relative_url: true #(true|false)
+  nomarkdown: true # true or false
+  ignore_missing_images: true # ignore_missing_images: [production, development, testing]
+
+# Variable format options for URL styles below
+# pretty                                          => /2009/04/29/slap-chop/index.html
+# /:month-month:day-:year/:title.html/            => 04-29-2009/slap-chop.html
+# /blog/:year/:month/:day/:title                 => /blog/2009/04/29/slap-chop/index.html
+
+# UnComment once you have pygments installed. Used for code syntax highlighting.
+#pygments: true
+
+exclude:
+  - Illustrations # Don't include the original illustrations directory
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - .DS_Store
+  - .gitattributes
+  - .gitignore
+
+  # Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Collections
+collections:
+  tags: # tags generation for collection, see https://github.com/jekyll/jekyll/issues/6948#issuecomment-383754782
+    output: true
+    permalink: /tags/:name/
+  categories: # categories generation for collections until Jekyll provides with this in core
+    output: true
+    permalink: /categories/:name/ # https://github.com/jekyll/jekyll/issues/6948#issuecomment-383754782
+  essays:
+    output: true
+    permalink: /:collection/:path/
+
+# Custom configs
+
+# Jekyll Archives Settings https://github.com/jekyll/jekyll-archives
+jekyll-archives:
+  enabled: 'all'
+  layout: 'archive-taxonomy'
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+  category_archive:
+    type: liquid
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development

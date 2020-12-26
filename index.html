@@ -1,0 +1,75 @@
+---
+layout: default
+title: "alternate, a portfolio theme for Jekyll + Tachyons"
+pagination:
+  enabled: true
+---
+
+<main class="cf pa2 ph5-ns">
+
+  <div class="vh-100 dt w-100 tc bg-dark-gray green cover" style="background:url(/img/background.png) no-repeat center;">
+    <div class="dtc v-mid">
+      <header class="black-60">
+    
+      </header>
+      <h1 class="f1ns fw5 i black-60 serif">alternate, a Jekyll portfolio theme</h1>
+
+      <a class="btn btn--primary f6 f5-l ba b--solid ttu tracked ph3 pv2 mb2 mt2-ns mt3 dib green grow helvetica" href="https://github.com/YJPL/alternate" title="Contact">Download from GitHub</a>
+
+      <h2 class="f6 f4-m fw6 tc helvetica black-60">scroll down to visit portfolio</h2>
+      <p class="fw8 tc"><svg data-id="" fill="#33cc99" height="48" viewBox="0 0 32 32" width="48" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z"></path>
+      </svg></p>
+    </div>
+  </div>
+</br>
+
+</main>
+
+<article class="cf pa2 ph5-ns">
+
+
+    <div class="fl w-100 w-50-ns ph2">
+      <a href="/" class="pv2 grow db no-underline black"><img class="db w-100" src="/img/sky.jpg"></a>
+      <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="/img/photo.jpg"></a>
+      <a href="/about/" class="pv2 grow db no-underline black"><img class="db w-100" src="/img/background.png"></a>
+    </div>
+    <div class="fl w-100 w-50-ns ph2">
+      <a href="/" class="pv2 grow db no-underline black"><img class="db w-100" src="/img/sky.jpg"></a>
+      <a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="/img/photo.jpg"></a>
+      <a href="/about/" class="pv2 grow db no-underline black"><img class="db w-100" src="/img/background.png"></a>
+    </div>
+    <div class="fl w-100 ph2">
+      <a href="/about/" class="pv2 grow db no-underline black"><img class="db w-100" src="/img/background.png"></a>
+    </div>
+
+</article>
+
+<section class="cf ph3 ph5-ns pv5">
+  <article class="mw9-l f4-ns sans-serif">
+    <h1 class="f2 lh-title fw7 mb3 mt0 pt3 bt bw2 avenir">{{ site.data.theme.text.latest_articles | default: "Recent Posts" }}</h1>
+
+    {% for post in site.posts limit: site.data.theme.text.post_limit %}
+    <a class="link black-80 hover-green" href="{{ post.url | relative_url }}">
+      <article class="f5 lh fw3 pb4 bb b--light-gray avenir">
+        <div class="f5 fw3 silver lh-copy">
+          {% if post.last_modified_at %}
+          <span>{{ site.data.theme.text.updated }}<time datetime="{{ post.last_modified_at | date: "%Y-%m-%d %H:%M" }}">{{ post.last_modified_at | date: site.date_format }}</time></span>
+          {% else %}
+          <time datetime="{{ post.date | date: "%Y-%m-%d %H:%M" }}">{{ post.date | date: site.date_format }}</time>
+          {% endif %}
+          <span class="ttl">&middot; {% include read_time.html %}</span>
+        </div>
+        <h3 class="f3 f2-ns fw6 lh-title mt0 mb0">{{ post.title | escape }}</h3>
+        <div class="f5 f4-ns fw3 lh-copy measure-wide mv2">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</div>
+        <div class="f6 fw3 silver lh-copy mb0">{{ site.data.theme.text.read_more | capitalize }}&hellip;</div>
+      </article>
+    </a>
+    {% endfor %}
+
+    <div class="inline-flex">
+      <a class="f5 f4-ns fw3 link black-80 hover-silver ba bw1 mv4 pv2 ph3" href="{{ site.data.theme.text.full_archive_url | relative_url }}">{{ site.data.theme.text.full_archive | default: "All Posts" }}</a>
+    </div>
+
+  </article>
+</section>

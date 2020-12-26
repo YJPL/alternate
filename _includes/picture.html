@@ -1,0 +1,38 @@
+{% assign gallery = page.path  %}
+<h4 class="title">{{ .Get "title" }}</h4>
+<figure itemscope itemtype="http://schema.org/ImageObject" class="image gallery-item">
+
+	<a href="{{ .Permalink }}"itemprop="contentUrl" data-size="{{ .w }}x{{ .h }}">
+  <img src="{{ include.file }}" class="gallery__img--main" itemprop="thumbnail" alt="{{ include.alt }}"/>
+  </a>
+  <figcaption itemprop="caption description">{% if alt %}<span itemprop="copyrightHolder" class="title">{{ alt }}</span>{% endif %}</figcaption>
+</figure>
+
+
+
+{% comment %}
+
+<!--  img/%{width}/%{basename}
+
+
+<figure class="image">
+  <img src="{{ include.url }}" alt="{{ include.description }}">
+  <figcaption>{{ include.description }}</figcaption>
+</figure>
+
+{% assign gallery = page.path  %}
+
+<figure class="pswp">
+
+<img src="/img/%{width}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }} /{{ path }}">
+
+<!-- You may use alt or title for captions. -->
+<!--	<figcaption>{% if alt %}<span class="title">{{ alt }}</span>{% endif %}</figcaption>
+</figure> -->
+
+
+<!-- <img src="/img/%{w}{h}/%{basename}/{{ include.src }}" /> -->
+
+<!--  alt="{{ alt }}" srcset="{{ srcset | strip_newlines }} /{{ path }} -->
+
+{% endcomment %}

@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<main class="cf ph3 ph5">
+  <header class="fl w-100 w-50-l ph3-m ph4-l">
+      {% if site.data.theme.post_meta %}
+      {% include post_meta.html %}
+      {% endif %}
+
+      {% unless page.header.layout == 'hero' %}
+    <!-- This is where the title: in your front matter gets dropped in.-->
+    <h1 class="2-m f1-l sans-serif fw-9 black lh-title mb1 bt bw2">{{ page.title }}</h1>
+    <h2 class="f3-m f2-l sans-serif fw-9 black-70 lh-title mb1">{% if page.subtitle %}{{page.subtitle}}{%endif%}</h2>
+
+    <time datetime class="gray f6 avenir">{{ page.date | date_to_long_string: "ordinal" }}</time>
+
+    {% endunless %}
+    </header>
+
+    <section class="fl w-100">
+
+    <!-- This is where post content lives -->
+    <article class="fl w-100 w-50-l ph3-m pa4-l">
+      <div class="f5 f4-ns lh-copy measure wide serif">
+      {{content}}
+    </div>
+  </article>
+
+    <div class="fl w-100 w-50-m w-50-l ph3-m ph4-l">
+      <p class="f5 f3-ns lh-copy measure">
+
+      {% if page.sidebar %}
+      {% include sidebar.html %}
+      {% endif %}
+
+
+      <p>
+    </div>
+
+    <div class="fl w-100">
+      {% if site.data.theme.category_tag_list %}
+      {% include category_tag_list.html %}
+      {%endif%}
+
+    </div>
+
+      </section>
+    <!-- end of post content -->
+  </main>
+
+{% include post_pagination.html %}

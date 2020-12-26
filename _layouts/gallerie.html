@@ -1,0 +1,35 @@
+---
+layout: default
+---
+  <section class="pa3 pa5-ns w-100">
+
+    <div class="row text-center text-lg-left gallery">
+      {% for picture in layout.gallery %}
+        {% if picture.w and picture.h %}
+            <a href="{% include img-link id=picture.id %}" data-size="{{picture.w}}x{{picture.h}}" data-med-size="{{picture.w}}x{{picture.h}}" data-med="{% include img-link id=picture.id %}" class="d-block mb-4 col-lg-3 col-md-4 col-xs-6" alt="{{picture.alt}}">
+        {% else %}
+            <a href="{% include img-link id=picture.id %}" data-size="1920x960" data-med-size="1920x960" data-med="{% include img-link id=picture.id %}" class="d-block mb-4 col-lg-3 col-md-4 col-xs-6" alt="{{picture.alt}}">
+        {% endif %}
+          <img class="img-fluid img-thumbnail" src="{% include img-link id=picture.id options='w_300,h_200' %}" alt="{{picture.alt}}">
+        </a>
+      {% endfor %}
+    </div>
+
+  {{content}}
+
+
+    </section>
+
+    {% include signup_footer.html %}
+
+{% if page.photoswipe %}
+  {% include photoswipe-container.html %}
+{% endif %}
+
+<script defer src="/js/all.js"></script>
+  {% if page.photoswipe %}
+<script defer src="/js/photoswipe.all.js"></script>
+  {% endif %}
+
+  </body>
+  </html>
