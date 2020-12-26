@@ -52,18 +52,13 @@ to optimize images from "Illustrations" folder into "img", which is the producti
 Since you only need to run this once, you should remove pictures from the "Illustrations" folder before you add the next batch.
 
 ## Responsive images
-Since this entire project is visual, this aspect is important—resized images are served by the [jekyll-picture-tag]() plugin to `_site/images/generated`
+For a portfolio, this aspect is important. Resized images are served by the [jekyll-picture-tag](https://github.com/rbuchberger/jekyll_picture_tag) plugin to `_site/images/generated`
 
 The site also use a custom ruby plugin that will replace Markdown images eg. `![description](image.jpg)` with `{% picture %}` tag
 
 It means that you no longer need to write special markup for responsive image such as `{% picture image.jpg --alt alt text for image --title image title %}`, and that, should you stop using the picture tag plugin, the site images would not break (assuming you keep the little `img_tag_transform.rb` ruby plugin in place, otherwise you’d need to write `![description](img/image.jpg)` for the images to display.
 
-Know issues - if you use a link with the Jekyll Picture Tag, it will also get applied to other images elsewhere which is annoying.
-see [https://github.com/rbuchberger/jekyll-picture-tag/issues/123](https://github.com/rbuchberger/jekyll-picture-tag/issues/123)
-
-For now don't use specific attributes on individual picture.
-
-Also, make sure there there is no space in image names!!!
+Make sure there there is no space in image names!!!
 
 ## Site Structure
 
