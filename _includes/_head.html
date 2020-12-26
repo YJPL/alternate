@@ -9,19 +9,22 @@
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
 
-	<!-- Favicon -->
-
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#33cc99">
-	<meta name="msapplication-TileColor" content="#33cc99">
-	<meta name="theme-color" content="#ffffff">
-
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="{{ '/css/alt-tachyons.min.css' | relative_url }}">
+  {% assign user_url = site.url | append: site.baseurl %}
+	{% assign full_base_url = user_url | default: site.github.url %}
+	<link rel="stylesheet" href="{{ "/css/alt-tachyons.min.css" | prepend: full_base_url }}">
 
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  
+   <!-- Favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+   <link rel="manifest" href="/site.webmanifest">
+   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#33cc99">
+   <meta name="msapplication-TileColor" content="#33cc99">
+   <meta name="theme-color" content="#ffffff">
 	<!-- Custom CSS -->
 
 	<!-- Custom scripts -->
