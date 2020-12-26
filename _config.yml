@@ -22,7 +22,7 @@ social:
     url: https://github.com/YJPL
 
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#baseurl: ""
+baseurl: 
 
 # No analytics, because it's a waste of time
 
