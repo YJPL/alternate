@@ -86,6 +86,7 @@ exclude:
   - package-lock.json
   - Rakefile
   - .DS_Store
+  - .nova
   - .gitattributes
   - .gitignore
 
