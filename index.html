@@ -50,7 +50,7 @@ pagination:
     <h1 class="f2 lh-title fw7 mb3 mt0 pt3 bt bw2 avenir">{{ site.data.theme.text.latest_articles | default: "Recent Posts" }}</h1>
 
     {% for post in site.posts limit: site.data.theme.text.post_limit %}
-    <a class="link black-80 hover-green" href="{{ post.url | relative_url }}">
+    <a class="link black-80 hover-green" href="{{ post.url | prepend: full_base_url }}">
       <article class="f5 lh fw3 pb4 bb b--light-gray avenir">
         <div class="f5 fw3 silver lh-copy">
           {% if post.last_modified_at %}
@@ -68,7 +68,7 @@ pagination:
     {% endfor %}
 
     <div class="inline-flex">
-      <a class="f5 f4-ns fw3 link black-80 hover-silver ba bw1 mv4 pv2 ph3" href="{{ site.data.theme.text.full_archive_url | relative_url }}">{{ site.data.theme.text.full_archive | default: "All Posts" }}</a>
+      <a class="f5 f4-ns fw3 link black-80 hover-silver ba bw1 mv4 pv2 ph3" href="{{ site.data.theme.text.full_archive_url | prepend: full_base_url }}">{{ site.data.theme.text.full_archive | default: "All Posts" }}</a>
     </div>
 
   </article>
