@@ -1,7 +1,7 @@
 <div class="pa4 pa5-ns flex">
 
   {% if page.previous %}
-  <a href="{{ page.previous.url | prepend: full_base_url }}" class="avenir link near-black hover-green fl w-100 dib mr4">
+  <a href="{{ page.previous.url | prepend: site.url }}" class="avenir link near-black hover-green fl w-100 dib mr4">
     <div class="fl tl">
       <svg class="w1 v-mid" data-icon="chevronLeft" viewBox="0 0 32 32" style="fill:currentcolor">
         <title>chevronLeft icon</title>
@@ -13,7 +13,7 @@
   </a>
   {% endif %}
   {% if page.next %}
-  <a href="{{ page.next.url | prepend: full_base_url }}" class="link near-black hover-green fl w-100 w-50-m w-25-r">
+  <a href="{{ page.next.url | prepend: site.url }}" class="link near-black hover-green fl w-100 w-50-m w-25-r">
     <div class="fr tr">
       <span class="avenir f5 gray">Next post</span>
       <svg class="w1 v-mid" data-icon="chevronRight" viewBox="0 0 32 32" style="fill:currentcolor">
