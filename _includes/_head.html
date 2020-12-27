@@ -4,7 +4,7 @@
 	<!-- Atom Feed -->
  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Feed" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-
+   
 	<!-- https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag -->
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
@@ -16,13 +16,15 @@
 	<link rel="stylesheet" href="{{ "/css/alt-tachyons.min.css" | prepend: full_base_url }}">
   
    <!-- Favicon -->
-   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-   <link rel="manifest" href="/site.webmanifest">
-   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#33cc99">
-   <meta name="msapplication-TileColor" content="#33cc99">
-   <meta name="theme-color" content="#ffffff">
+   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/img/apple-touch-icon.png' | prepend: site.baseurl | prepend: site.url }}">
+	  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/img/favicon-32x32.png' | prepend: site.baseurl | prepend: site.url }}">
+	  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/favicon-16x16.png' | prepend: site.baseurl | prepend: site.url }}">
+	  <link rel="manifest" href="{{ '/img/site.webmanifest' | prepend: site.baseurl | prepend: site.url }}">
+	  <link rel="mask-icon" href="{{ '/img/safari-pinned-tab.svg' | prepend: site.baseurl | prepend: site.url }}" color="#33cc99">
+	  <link rel="shortcut icon" href="{{ '/img/favicon.ico' | prepend: site.baseurl | prepend: site.url }}">
+	  <meta name="msapplication-TileColor" content="#33cc99">
+	  <meta name="msapplication-config" content="{{ '/img/browserconfig.xml' | prepend: site.baseurl | prepend: site.url }}">
+	  <meta name="theme-color" content="#33cc99">
 	<!-- Custom CSS -->
 
 	<!-- Custom scripts -->
