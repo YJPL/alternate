@@ -13,7 +13,7 @@
   <!-- Stylesheet -->
   {% assign user_url = site.url | append: site.baseurl %}
 	{% assign full_base_url = user_url | default: site.github.url %}
-	<link rel="stylesheet" href="{{ "/css/alt-tachyons.min.css" | prepend: full_base_url }}">
+	<link rel="stylesheet" href="{{ "/css/alt-tachyons.min.css" }}">
   
    <!-- Favicon -->
    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/img/apple-touch-icon.png' | prepend: site.baseurl | prepend: site.url }}">
