@@ -17,9 +17,6 @@ const rename = require("gulp-rename");
 const basswork = require("gulp-basswork");
 const size = require("gulp-size");
 const uglify = require("gulp-uglify");
-//const webpack = require("webpack");
-//const webpackconfig = require("./webpack.config.js");
-//const webpackstream = require("webpack-stream");
 
 // BrowserSync
 function browserSync(done) {
