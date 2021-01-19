@@ -72,47 +72,6 @@ function css() {
     .pipe(browsersync.stream());
 }
 
-// Lint scripts
-function scriptsLint() {
-  return gulp
-    .src(["./assets/scripts/**/*", "./gulpfile.js"])
-    .pipe(plumber())
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-}
-
-// Transpile, concatenate and minify scripts
-function scripts() {
-  return gulp
-      .src(["./assets/photoswipe/dist/*.js", "_js/photoswipe.alt.js"])
-      .pipe(plumber())
-      .pipe(concat("photoswipe.all.js"))
-      .pipe(uglify())
-      // folder only, filename is specified in webpack config
-      .pipe(gulp.dest("./assets/js"));
-}
-
-function pswppassets() {
-  return gulp
-    .src(["./assets/photoswipe/dist/default-skin/*.png", "./assets/photoswipe/dist/default-skin/*.svg", "/assets/photoswipe/dist/default-skin/*.gif"])
-    .pipe(
-      imagemin({
-        progressive: true,
-        svgoPlugins: [{ removeViewBox: false }]
-      })
-    )
-    .pipe(gulp.dest("./css"));
-}
-
-function jsall() {
-  return gulp
-    .src(["./_js/lazyload.js"])
-    .pipe(concat("all.js"))
-    .pipe(uglify({mangle: false}))
-    .pipe(gulp.dest("./assets/js"));
-}
-
 // Jekyll
 function jekyll() {
   return cp.spawn("bundle", ["exec", "jekyll", "build"], { stdio: "inherit" });
@@ -121,7 +80,6 @@ function jekyll() {
 // Watch files
 function watchFiles() {
   gulp.watch("./src/**/*", css);
-  gulp.watch("./assets/js/**/*", gulp.series(scriptsLint, scripts));
   gulp.watch(
     [
       "*.html",
@@ -143,15 +101,13 @@ function watchFiles() {
 // Tasks
 gulp.task("images", images);
 gulp.task("css", css);
-gulp.task("js", gulp.series(scriptsLint, scripts, jsall));
-gulp.task("pswppassets", pswppassets);
 gulp.task("jekyll", jekyll);
 gulp.task("clean", clean);
 
 // build
 gulp.task(
   "build",
-  gulp.series(clean, gulp.parallel(css, images, jekyll, "js", "pswppassets"))
+  gulp.series(clean, gulp.parallel(css, images, jekyll))
 );
 
 // watch
