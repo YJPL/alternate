@@ -55,7 +55,7 @@
   "dependencies": {
     "browser-sync": "2.26.14",
     "del": "^6.0.0",
-    "directory-tree": "^2.2.5",
+    "directory-tree": "^2.2.6",
     "gulp-basswork": "^0.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^6.0.0",
