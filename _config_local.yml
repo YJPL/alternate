@@ -6,6 +6,7 @@ author: "alternate"
 description: "A Jekyll portfolio theme built with Tachyons"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+development: true 
 repository: https://github.com/YJPL/alternate/
 
 # Date format
