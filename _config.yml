@@ -55,11 +55,11 @@ paragraph_classes: f6 f5-ns
 
 # Plugins
 plugins:
-  - jekyll-picture-tag
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-archives
-  - jekyll-seo-tag
+- jekyll_picture_tag
+- jekyll-sitemap
+- jekyll-feed
+- jekyll-archives
+- jekyll-seo-tag
 
 # Jekyll Picture Tag general settings
 picture:
