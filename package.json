@@ -24,17 +24,17 @@
     "url": "https://github.com/YJPL/alternate/issues"
   },
   "devDependencies": {
-    "autoprefixer": "^10.3.1",
-    "cssnano": "^5.0.7",
+    "autoprefixer": "^10.3.5",
+    "cssnano": "^5.0.8",
     "gulp": "^4.0.2",
-    "gulp-imagemin": "^7.1.0",
+    "gulp-imagemin": "^8.0.0",
     "gulp-newer": "^1.4.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^9.0.0",
+    "gulp-postcss": "^9.0.1",
     "gulp-size": "^4.0.1",
     "gulp-uglify": "^3.0.2",
     "immutable-css-cli": "^1.1.1",
-    "postcss": "^8.3.6",
+    "postcss": "^8.3.7",
     "watch": "^1.0.2"
   },
   "contributors": [
@@ -52,9 +52,9 @@
     "build:watch": "watch \"npm run build\" ./src/"
   },
   "dependencies": {
-    "browser-sync": "2.27.4",
+    "browser-sync": "2.27.5",
     "del": "^6.0.0",
-    "directory-tree": "^2.2.7",
+    "directory-tree": "^3.0.0",
     "gulp-basswork": "^0.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^6.0.0",
