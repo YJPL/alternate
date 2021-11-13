@@ -3,13 +3,13 @@
 author:
   name          : "Author"
   picture       : "/img/author.png"
-  url           : "https://example.com"
+  url           : "https://alternatyves.com"
   email         :
-  bio           : "Author bio here"
+  bio           : "We Design Stories"
   post_meta_bio : "More about the author"
   cta           : "Subscribe"
   cta_url       : "/alternate-theme-setup/"
-  twitter       : ""
+  twitter       : "alternatyves"
   facebook      : ""
 
 guest:
