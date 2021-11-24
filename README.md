@@ -5,7 +5,20 @@
 
 To check the Jekyll theme minus content, go to: [GitHub link](link)
 
-# Get Started
+## Features
+- [x] Image index start page
+- [x] Blog
+- [x] [jekyll-archives](https://github.com/jekyll/jekyll-archives) to build and sort through categories & tags pages
+- [x] RSS/Atom feed
+- [x] SEO tags
+- [x] Microdata markup
+- [x] [Gulp.js](https://gulpjs.com) + [Browsersync](https://www.browsersync.io) for fast development
+- [x] Built-in site search (does not work with GitHub Pages)
+
+
+## Get Started
+
+Install [Jekyll](https://jekyllrb.com/docs/installation/)
 
 ```
 git clone git://github.com/YJPL/alternate.git
@@ -14,6 +27,9 @@ cd alternate
 npm start
 ```
 That should do the trick.
+Add your site and author details in `_config.yml`.
+Get a workflow going to see your site's output with Jekyll locally using Jekyll commands or Gulp.
+
 Then open another tab in terminal and run
 
 ```
@@ -72,7 +88,7 @@ in `alternate/_layouts/` Folders that begin with an underscore are not copied ov
 
 ## Collections
 
-Collections include portfolio works and other -> see `_config.yml` frontmatter for specific configuration.
+Read about [collections](https://jekyllrb.com/docs/collections/) in the Jekyll documentation.
 
 # Credits & thanks
 
@@ -82,7 +98,7 @@ Thanks to [GitHub](https://github.com/) for code versioning and to [Netlify](htt
 
 # Copyright / License
 
-The content of this project itself, all illustrations & design works are (c) Yves JPL Capelle / [alternate outc.](https://alternate.com) / SOFAM. The underlying source code used to format and display that content is licensed under the MIT license.
+The content of this project itself, all illustrations & design works are (c) Yves JPL Capelle / [alternate outc.](https://alternatyves.com) / SOFAM. The underlying source code used to format and display that content is licensed under the MIT license.
 
 # License
 
