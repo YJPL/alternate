@@ -3,7 +3,7 @@
 
 ![alternate screenshot](img/alternate-JKLL.png)
 
-To check the Jekyll theme minus content, go to: [GitHub link](link)
+To check the Jekyll theme minus content, go to: [GitHub link](https://yjpl.github.io/alternate/)
 
 ## Features
 - [x] Image index start page
