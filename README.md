@@ -154,7 +154,7 @@ The content of this project itself, all illustrations & design works are (c) Yve
 
 The MIT License (MIT)
 
-Copyright (c) 2020-2021 @YJPL
+Copyright (c) 2020-2023 @YJPL
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
