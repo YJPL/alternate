@@ -7,10 +7,8 @@ const concat = require("gulp-concat");
 const postcss = require("gulp-postcss");
 const cp = require("child_process");
 const cssnano = require("cssnano");
-const del = require("del");
 const eslint = require("gulp-eslint");
 const gulp = require("gulp");
-const imagemin = require("gulp-imagemin");
 const newer = require("gulp-newer");
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
@@ -35,24 +33,6 @@ function browserSyncReload(done) {
   done();
 }
 
-// Clean assets
-function clean() {
-  return del(["./_site/assets/"]);
-}
-
-// Optimize Images
-function images() {
-  return gulp
-    .src("./Illustrations/**/*")
-    .pipe(newer("./img"))
-    .pipe(
-      imagemin({
-        progressive: true,
-        svgoPlugins: [{ removeViewBox: false }]
-      })
-    )
-    .pipe(gulp.dest("./img"));
-}
 
 // CSS task
 function css() {
@@ -92,19 +72,16 @@ function watchFiles() {
     ],
     gulp.series(jekyll, browserSyncReload)
   );
-  gulp.watch("./img/**/*", images);
 }
 
 // Tasks
-gulp.task("images", images);
 gulp.task("css", css);
 gulp.task("jekyll", jekyll);
-gulp.task("clean", clean);
 
 // build
 gulp.task(
   "build",
-  gulp.series(clean, gulp.parallel(css, images, jekyll))
+  gulp.series(gulp.parallel(css, jekyll))
 );
 
 // watch
