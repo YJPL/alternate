@@ -1,14 +1,11 @@
 {
   "name": "alternate",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "alternate theme built with Jekyll and Tachyons",
   "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YJPL/alternatyves/",
-    "scripts": {
-      "gulp": "gulp"
-    }
+    "url": "https://github.com/YJPL/alternatyves/"
   },
   "keywords": [
     "css",
@@ -25,16 +22,13 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.29.3",
     "cssnano": "^6.0.1",
-    "gulp": "^4.0.2",
-    "gulp-newer": "^1.4.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^9.0.1",
-    "gulp-size": "^4.0.1",
-    "gulp-uglify": "^3.0.2",
-    "immutable-css-cli": "^1.1.1",
     "postcss": "^8.4.24",
-    "watch": "^1.0.2"
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.1",
+    "postcss-preset-env": "^8.5.1"
   },
   "contributors": [
     {
@@ -43,19 +37,14 @@
     }
   ],
   "scripts": {
-    "start": "npm run build:watch",
-    "mutations": "immutable-css src/alt-tachyons.css --strict",
-    "build": "npm run build:css && npm run build:minify",
-    "build:css": "tachyons src/alt-tachyons.css > css/alt-tachyons.css",
-    "build:minify": "tachyons src/alt-tachyons.css --minify > css/alt-tachyons.min.css",
-    "build:watch": "watch \"npm run build\" ./src/"
+    "start": "npm run build && npm run serve:jekyll && npm run browser-sync",
+    "serve:jekyll": "JEKYLL_ENV=development bundle exec jekyll serve --livereload",
+    "build": "npm run build:css && npm run minify:css",
+    "build:css": "postcss src/alt-tachyons.css > css/alt-tachyons.css",
+    "minify:css": "postcss css/alt-tachyons.css > css/alt-tachyons.min.css --use cssnano",
+    "build:watch": "npm run build && npm run serve:jekyll && browser-sync start --config bs-config.js --files '_site/**/*'"
   },
   "dependencies": {
-    "browser-sync": "2.29.3",
-    "directory-tree": "^3.5.1",
-    "gulp-basswork": "^0.2.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-eslint": "^6.0.0",
-    "gulp-rename": "^2.0.0"
+    "directory-tree": "^3.5.1"
   }
 }
