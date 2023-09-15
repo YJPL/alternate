@@ -21,14 +21,14 @@
     "url": "https://github.com/YJPL/alternate/issues"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.15",
     "browser-sync": "^2.29.3",
     "cssnano": "^6.0.1",
-    "postcss": "^8.4.27",
+    "postcss": "^8.4.29",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
     "postcss-nested": "^6.0.1",
-    "postcss-preset-env": "^9.1.1"
+    "postcss-preset-env": "^9.1.3"
   },
   "contributors": [
     {
