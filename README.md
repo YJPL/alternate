@@ -46,26 +46,14 @@ To restart server, go to terminal tab that server is running in then press
 `ctrl+C ⇧  enter`
 then
 
-`gulp build`
+To fire Jekyll with auto-regeneration, use:
+
+`npm run start`
 
 This runs a series of tasks: minifies CSS, images and Javascript.
 
+This command builds the site locally on port 4000, with livereload so you can quickly revise design changes.(the project uses 
 
-To fire Jekyll with auto-regeneration, use:
-
-`gulp watch`
-
-This command builds the site locally on port 3000, with [Browsersync](https://www.browsersync.io) so you can quickly revise design changes.(the project uses Gulp `CLI version 2.0.1` / Local version `4.0.0`)
-
-
-## Optimize Images
-
-run
-
-`gulp images`
-
-to optimize images from "Illustrations" folder into "img", which is the production folder.
-Since you only need to run this once, you should remove pictures from the "Illustrations" folder before you add the next batch.
 
 ## Responsive images
 For a portfolio, this aspect is important. Resized images are served by the [jekyll-picture-tag](https://github.com/rbuchberger/jekyll_picture_tag) plugin to `_site/images/generated`
