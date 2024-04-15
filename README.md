@@ -12,7 +12,7 @@ To check the Jekyll theme minus content, go to: [Theme demo](https://yjpl.github
 - [x] RSS/Atom feed
 - [x] SEO tags
 - [x] Microdata markup
-- [x] [Gulp.js](https://gulpjs.com) + [Browsersync](https://www.browsersync.io) for fast development
+- [x] Jekyll reload for fast development
 - [x] Built-in site search (does not work with GitHub Pages)
 
 
@@ -28,7 +28,7 @@ npm start
 ```
 That should do the trick.
 Add your site and author details in `_config.yml`.
-Get a workflow going to see your site's output with Jekyll locally using Jekyll commands or Gulp.
+Get a workflow going to see your site's output with Jekyll locally using Jekyll commands.
 
 Then open another tab in terminal and run
 
@@ -48,11 +48,11 @@ then
 
 To fire Jekyll with auto-regeneration, use:
 
-`npm run start`
+`npm run start` to process Tachyons CSS files, compile and minify CSS & Javascript, using the `--livereload` command to watch changes locally.
 
-This runs a series of tasks: minifies CSS, images and Javascript.
+This command builds the site locally on port 4000, with livereload so you can quickly revise design changes.
 
-This command builds the site locally on port 4000, with livereload so you can quickly revise design changes.(the project uses 
+
 
 
 ## Responsive images
@@ -91,31 +91,6 @@ You can change the site styling using [Tachyons](http://tachyons.io), look for t
 
 Tachyons is a CSS toolkit and design system based on using components. Please refer to [Tachyons documentation](http://tachyons.io/docs/), you can also start with [https://github.com/dwyl/learn-tachyons](https://github.com/dwyl/learn-tachyons)
 
-### Gulp commands with browser reload
-
-Supply uses a couple of custom Gulp.js commands with gulp. Make sure to install gulp 4: `npm install --global gulp-cli`. (If you have an earlier version of Gulp JS, make sure to remove it by running npm uninstall --global gulp).  Then run `npm install --save-dev gulp@4` to install it into your project development dependencies.
-
-Once that is done, to build your site & concatenate your CSS (in `assets` -> `CSS`), simply run:
-
-~~~bash
-gulp build
-~~~
-
-in Terminal.
-
-Then use
-
-
-~~~bash
-gulp watch
-~~~
-
-This command builds the site locally on port 3000, with [Browsersync](https://www.browsersync.io) so you can quickly revise design changes.
-
-
-Preview your site with browser reload at [localhost:3000](http://localhost:3000)
-Use the address [localhost:3001](http://localhost:3001) for additional features like grid preview, CSS highlighting, and more during development.
-
 
 ## Editing
 
@@ -142,7 +117,7 @@ The content of this project itself, all illustrations & design works are (c) Yve
 
 The MIT License (MIT)
 
-Copyright (c) 2020-2023 @YJPL
+Copyright (c) 2020-2024 @YJPL
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
