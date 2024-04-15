@@ -12,7 +12,7 @@ To check the Jekyll theme minus content, go to: [Theme demo](https://yjpl.github
 - [x] RSS/Atom feed
 - [x] SEO tags
 - [x] Microdata markup
-- [x] [Gulp.js](https://gulpjs.com) + [Browsersync](https://www.browsersync.io) for fast development
+- [x] Jekyll `livereload` + NPM for fast development
 - [x] Built-in site search (does not work with GitHub Pages)
 
 
@@ -52,7 +52,7 @@ To fire Jekyll with auto-regeneration, use:
 
 This runs a series of tasks: minifies CSS, images and Javascript.
 
-This command builds the site locally on port 4000, with livereload so you can quickly revise design changes.(the project uses 
+This command builds the site locally on port 4000, with livereload so you can quickly revise design changes.
 
 
 ## Responsive images
@@ -91,7 +91,41 @@ You can change the site styling using [Tachyons](http://tachyons.io), look for t
 
 Tachyons is a CSS toolkit and design system based on using components. Please refer to [Tachyons documentation](http://tachyons.io/docs/), you can also start with [https://github.com/dwyl/learn-tachyons](https://github.com/dwyl/learn-tachyons)
 
+Once you are done with your style changes, run:
 
+Run the npm run 
+~~~bash
+build:css
+~~~
+
+That will process all your CSS files in one readable file located in `assets/css/alt-tachyons.css`. 
+
+to minify your css you can run 
+
+```
+npm run minify-css
+```
+
+or 
+
+```
+npm run start
+```
+
+to minify and build the site locally.
+
+
+### npm commands with browser reload
+
+Supply uses a couple of custom Postcss npm scripts. Make sure your dependencies are installed: `npm install`. Type `npm outdated` to see if you have outdated versions, then install any outdated dependencies.
+
+Once that is done, to build your site & concatenate your CSS (in `assets` -> `CSS`), simply run:
+
+```
+npm run start
+```
+
+This command builds the site locally on port 4000, you can quickly revise design changes thanks to `livereload`.
 ## Editing
 
 ### Posts
