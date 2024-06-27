@@ -64,10 +64,6 @@ It means that you no longer need to write special markup for responsive image su
 
 Make sure there there is no space in image names!!!
 
-## Site Structure
-
-In Terminal, CD `alternate` then run `Tree` to get a directory tree of the site files.
-
 ## Notes
 Blog posts are in `alternate/_posts/`
 There are three layouts, one for posts, one for other pages, and one for long form articles. Layouts are stored
@@ -126,6 +122,7 @@ npm run start
 ```
 
 This command builds the site locally on port 4000, you can quickly revise design changes thanks to `livereload`.
+
 ## Editing
 
 ### Posts
