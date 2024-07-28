@@ -54,6 +54,29 @@ This runs a series of tasks: minifies CSS, images and Javascript.
 
 This command builds the site locally on port 4000, with livereload so you can quickly revise design changes.
 
+## Config
+
+Add your custom configuration in the ```_config``` file.
+
+## Navigation
+
+Exposed as a data file to give clients better access Set in the ```Data``` / Navigation section, look for ```navigation.yml`` in _data.
+
+## Footer
+
+Look for footer.html in ```_includes``` to add your footer links.
+
+## Editing
+
+### Posts
+
+- Add, update or remove a post in the Posts collection.
+
+- Change the defaults when new posts are created in _posts/_defaults.md.
+
+### Collections
+
+Read about [collections](https://jekyllrb.com/docs/collections/) in the Jekyll documentation.
 
 ## Responsive images
 For a portfolio, this aspect is important. Resized images are served by the [jekyll-picture-tag](https://github.com/rbuchberger/jekyll_picture_tag) plugin to `_site/images/generated`
