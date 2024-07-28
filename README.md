@@ -146,17 +146,6 @@ npm run start
 
 This command builds the site locally on port 4000, you can quickly revise design changes thanks to `livereload`.
 
-## Editing
-
-### Posts
-
-* Add, update, or remove a post in the *Posts* collection.
-* Change the defaults when new posts are created in `_posts/_defaults.md`.
-
-## Collections
-
-Read about [collections](https://jekyllrb.com/docs/collections/) in the Jekyll documentation.
-
 # Credits & thanks
 
 Build with [Jekyll](https://jekyllrb.com) loosely based on [JKL + TACHYONS](https://github.com:mrmrs/jkl-tachyons), (c) 2015 @mrmrs
