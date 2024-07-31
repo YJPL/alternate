@@ -23,10 +23,10 @@
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "cssnano": "^7.0.4",
-    "postcss": "^8.4.39",
+    "postcss": "^8.4.40",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
-    "postcss-nested": "^6.0.1",
+    "postcss-nested": "^6.2.0",
     "postcss-preset-env": "^9.6.0"
   },
   "contributors": [
@@ -44,6 +44,6 @@
     "minify:css": "postcss css/alt-tachyons.css > css/alt-tachyons.min.css --use cssnano"
   },
   "dependencies": {
-    "directory-tree": "^3.5.1"
+    "directory-tree": "^3.5.2"
   }
 }
