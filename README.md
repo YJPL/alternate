@@ -148,7 +148,7 @@ This command builds the site locally on port 4000, you can quickly revise design
 
 # Credits & thanks
 
-Build with [Jekyll](https://jekyllrb.com) loosely based on [JKL + TACHYONS](https://github.com:mrmrs/jkl-tachyons), (c) 2015 @mrmrs
+Build with [Jekyll](https://jekyllrb.com) originally loosely based on [JKL + TACHYONS](https://github.com:mrmrs/jkl-tachyons), (c) 2015 @mrmrs
 
 Thanks to [GitHub](https://github.com/) for code versioning and to [Netlify](https://www.netlify.com) for deployment and content delivery.
 
