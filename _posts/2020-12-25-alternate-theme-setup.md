@@ -4,9 +4,8 @@ author: author
 layout: post
 description_markdown: >-
   Start your site using Jekyll + the alternate theme.
-date: 2020-12-25 12:48:59 +0100
+date: 2024-11-11 12:48:59 +0100
 categories: [Jekyll, tutorial]
-text-button: I demand Supply!
 ---
 ## Getting started with Jekyll + *alternate*
 alternate was designed as a portfolio theme for [alternatyves](https://alternatyves.com), but you can use this theme to start a regular Jekyll blog and tweak it any way you like.
@@ -46,33 +45,44 @@ Look for ```footer.html``` in ```_includes``` to add your footer links.
 
 ### Tachyons
 
-You can change the site styling using [Tachyons](http://tachyons.io), look for `sup-theme` in the `src` folder.
+You can change the site styling using [Tachyons](http://tachyons.io), look for the CSS in the `sup-theme` file, located in the `src` folder.
 
-Please refer to Tachyons documentation, you can also start with [https://github.com/dwyl/learn-tachyons](https://github.com/dwyl/learn-tachyons)
+Tachyons is a CSS toolkit and design system based on using components. Please refer to [Tachyons documentation](http://tachyons.io/docs/), you can also start with [https://github.com/dwyl/learn-tachyons](https://github.com/dwyl/learn-tachyons)
 
-### Gulp commands with browser reload
+Once you are done with your style changes, run:
 
-In the terminal, simply run
-
+Run the npm run 
 ~~~bash
-gulp build
+build:css
 ~~~
 
-to build your site concatenate your css (in `asset` -> `css`)
+That will process all your CSS files in one readable file located in `assets/css/alt-tachyons.css`. 
 
+to minify your css you can run 
 
-Use
+```
+npm run minify-css
+```
 
+or 
 
-~~~bash
-gulp watch
-~~~
+```
+npm run start
+```
 
-This command builds the site locally on port 3000, with [Browsersync](https://www.browsersync.io) so you can quickly revise design changes.
+to minify and build the site locally.
 
+### npm commands with browser reload
 
-Preview your site with browser reload at: [localhost:3000](http://localhost:3000)
-Use the address localhost:3001 for additional help like grid preview, css highlight and more during development.
+Supply uses a couple of custom Postcss npm scripts. Make sure your dependencies are installed: `npm install`. Type `npm outdated` to see if you have outdated versions, then install any outdated dependencies.
+
+Once that is done, to build your site & concatenate your CSS (in `assets` -> `CSS`), simply run:
+
+```
+npm run start
+```
+
+This command builds the site locally on port 4000, you can quickly revise design changes thanks to `livereload`.
 
 
 ## Editing
