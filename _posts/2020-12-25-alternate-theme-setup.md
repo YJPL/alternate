@@ -4,31 +4,62 @@ author: author
 layout: post
 description_markdown: >-
   Start your site using Jekyll + the alternate theme.
-date: 2024-11-11 12:48:59 +0100
+date: 2020-12-25 12:48:59 +0100
+last_modified_at: "2024-11-13"
 categories: [Jekyll, tutorial]
 ---
 ## Getting started with Jekyll + *alternate*
-alternate was designed as a portfolio theme for [alternatyves](https://alternatyves.com), but you can use this theme to start a regular Jekyll blog and tweak it any way you like.
+alternate was initially designed as a portfolio theme for [alternatyves](https://alternatyves.com). You can use this theme to start a regular Jekyll blog and tweak it any way you like.
 
-## Setup
+## Features
+- [x] Image index start page
+- [x] Blog
+- [x] [jekyll-archives](https://github.com/jekyll/jekyll-archives) to build and sort through categories & tags pages
+- [x] RSS/Atom feed
+- [x] SEO tags
+- [x] Microdata markup
+- [x] Jekyll `livereload` + NPM for fast development
+- [x] Built-in site search (does not work with GitHub Pages)
 
-1. Install [Jekyll](https://jekyllrb.com/docs/installation/)
-2. Add your site and author details in `_config.yml`.
-3. Get a workflow going to see your site's output with Jekyll locally using Jekyll commands or Gulp.
 
-*Supply* was built with [Jekyll](http://jekyllrb.com/) version 4.0.0, and should support newer versions as well.
+## Get Started
 
-Install the dependencies with [Bundler](http://bundler.io/):
+Install [Jekyll](https://jekyllrb.com/docs/installation/)
 
-~~~bash
-$ bundle install
-~~~
+```
+git clone git://github.com/YJPL/alternate.git
+cd alternate
+(npm install tachyons)
+npm start
+```
+That should do the trick.
+Add your site and author details in `_config.yml`.
+Get a workflow going to see your site's output with Jekyll locally using Jekyll commands or Gulp.
 
-Run `jekyll` commands through Bundler to ensure you're using the right versions:
+Then open another tab in terminal and run
 
-~~~bash
-$ bundle exec jekyll serve
-~~~
+```
+bundle exec jekyll serve --watch
+```
+
+This will build the site.
+
+This sets up a Jekyll server for dev on port 4000. The site is regenerated every time you save a file.
+NOTE: Changing ```_config.yml``` will require a restart of the Jekyll server to see changes.
+
+To restart server, go to terminal tab that server is running in then press
+
+`ctrl+C ⇧  enter`
+then
+
+To fire Jekyll with auto-regeneration, use:
+
+`npm run start`
+
+This runs a series of tasks: minifies CSS, images and Javascript.
+
+This command builds the site locally on port 4000, with livereload so you can quickly revise design changes.
+
 
 ### Config
 Add your custom configuration in the ```_config``` file.
