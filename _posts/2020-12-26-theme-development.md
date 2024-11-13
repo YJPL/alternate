@@ -4,7 +4,8 @@ layout: post
 description_markdown: >-
   Custom commands, styling and development notes for alternate.
 author: author
-date: 2024-11-11 12:48:59 +0100
+date: 2020-12-26 12:48:59 +0100
+last_modified_at: "2024-11-13"
 categories: [Jekyll, tutorial]
 ---
 ## Develop
