@@ -21,13 +21,13 @@
     "url": "https://github.com/YJPL/alternate/issues"
   },
   "devDependencies": {
-      "autoprefixer": "^10.4.20",
+      "autoprefixer": "^10.4.21",
       "cssnano": "^7.0.6",
-      "postcss": "^8.4.48",
-      "postcss-cli": "^11.0.0",
+      "postcss": "^8.5.3",
+      "postcss-cli": "^11.0.1",
       "postcss-import": "^16.1.0",
       "postcss-nested": "^7.0.2",
-      "postcss-preset-env": "^10.1.1",
+      "postcss-preset-env": "^10.1.5",
       "uglify-js": "^3.19.3"
     },
     "contributors": [
