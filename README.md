@@ -1,5 +1,5 @@
 # alternate Y2K20
-:new_moon: this is the Jekyll theme used for [@alternatyves](https://alternatyves.com) portfolio site
+:new_moon: A portdolio theme in Jekyll, made for [@alternatyves](https://alternatyves.com) portfolio site
 
 ![alternate screenshot](img/alternate-JKLL.png)
 
