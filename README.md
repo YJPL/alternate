@@ -1,5 +1,5 @@
 # alternate Y2K20
-:new_moon: this is the Jekyll theme used for [@alternatyves](https://alternatyves.com) portfolio site
+:new_moon: A portdolio theme in Jekyll, made for [@alternatyves](https://alternatyves.com) portfolio site
 
 ![alternate screenshot](img/alternate-JKLL.png)
 
@@ -160,7 +160,7 @@ The content of this project itself, all illustrations & design works are (c) Yve
 
 The MIT License (MIT)
 
-Copyright (c) 2020-2024 @YJPL
+Copyright (c) 2020-2026 @YJPL
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
