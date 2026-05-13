@@ -21,30 +21,27 @@
     "url": "https://github.com/YJPL/alternate/issues"
   },
   "devDependencies": {
-      "autoprefixer": "^10.4.21",
-      "cssnano": "^7.0.7",
-      "postcss": "^8.5.3",
-      "postcss-cli": "^11.0.1",
-      "postcss-import": "^16.1.0",
-      "postcss-nested": "^7.0.2",
-      "postcss-preset-env": "^10.1.5",
-      "uglify-js": "^3.19.3"
-    },
-    "contributors": [
-      {
-        "name": "YJPL",
-        "email": ""
-      }
-    ],
-    "scripts": {
-      "start": "npm run build && npm run serve:jekyll",
-      "serve:jekyll": "JEKYLL_ENV=development bundle exec jekyll serve --livereload --open-url http://localhost:4000/",
-      "minify-js": "uglifyjs assets/js/*.js -o assets/js/script.min.js",
-      "build": "npm run build:css && npm run minify:css",
-      "build:css": "postcss src/alt-tachyons.css > css/alt-tachyons.css",
-      "minify:css": "postcss css/alt-tachyons.css > css/alt-tachyons.min.css --use cssnano"
-    },
-    "dependencies": {
-      "sharp": "^0.34.1"
+    "autoprefixer": "^10.5.0",
+    "cssnano": "^8.0.1",
+    "postcss": "^8.5.14",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.1",
+    "postcss-nested": "^7.0.2",
+    "postcss-preset-env": "^11.2.1",
+    "uglify-js": "^3.19.3"
+  },
+  "contributors": [
+    {
+      "name": "YJPL",
+      "email": ""
     }
+  ],
+  "scripts": {
+    "start": "npm run build && npm run serve:jekyll",
+    "serve:jekyll": "JEKYLL_ENV=development bundle exec jekyll serve --livereload --open-url http://localhost:4000/",
+    "minify-js": "uglifyjs assets/js/*.js -o assets/js/script.min.js",
+    "build": "npm run build:css && npm run minify:css",
+    "build:css": "postcss src/alt-tachyons.css > css/alt-tachyons.css",
+    "minify:css": "postcss css/alt-tachyons.css > css/alt-tachyons.min.css --use cssnano"
   }
+}
